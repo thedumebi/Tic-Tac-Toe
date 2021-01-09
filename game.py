@@ -56,7 +56,7 @@ class TicTacToe:
             return True
 
         #check the column next
-        col_ind = square % 3 
+        col_ind = square % 3
         column = [self.board[col_ind+i*3] for i in range(3)]
         if all([spot == letter for spot in column]):
             return True
@@ -118,6 +118,6 @@ def play(game, x_player, o_player, print_game=True):
 
 if __name__ =="__main__":
     x_player = HumanPlayer("X")
-    o_player = HumanPlayer("O")
+    o_player = RandomComputerPlayer("O")
     t = TicTacToe()
     play(t, x_player, o_player, print_game=True)
